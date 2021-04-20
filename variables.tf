@@ -5,7 +5,7 @@ variable "env" {
 
 variable "region" {
   description = "AWS region"
-  default     = "ap-south-1"
+  default     = "us-east-1"
 }
 
 variable "repository_branch" {
@@ -25,12 +25,12 @@ variable "repository_name" {
 
 variable "static_web_bucket_name" {
   description = "S3 Bucket to deploy to"
-  default     = "nuxt-web-example-bucket-778877"
+  default     = "nuxt-web-bucket-778877"
 }
 
 variable "artifacts_bucket_name" {
   description = "S3 Bucket for storing artifacts"
-  default     = "nuxt-web-example-artifacts-777788"
+  default     = "nuxt-web-artifacts-777788"
 }
 
 variable "github_token" {

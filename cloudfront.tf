@@ -1,12 +1,12 @@
 resource "aws_cloudfront_distribution" "codepipeline" {
-    depends_on = [
-      aws_s3_bucket.static_web_bucket,
-      aws_s3_bucket.artifacts_bucket,
-      aws_codebuild_project.static_web_build,
-      aws_codepipeline.static_web_pipeline,
-      
-    ]
-  count      = 1
+  depends_on = [
+    aws_s3_bucket.static_web_bucket,
+    aws_s3_bucket.artifacts_bucket,
+    aws_codebuild_project.static_web_build,
+    aws_codepipeline.static_web_pipeline,
+
+  ]
+  count = 1
   origin {
     custom_origin_config {
       http_port              = 80
@@ -47,8 +47,8 @@ resource "aws_cloudfront_distribution" "codepipeline" {
 
   viewer_certificate {
     cloudfront_default_certificate = true
-    ssl_support_method       = "sni-only"
-    minimum_protocol_version = "TLSv1"
+    ssl_support_method             = "sni-only"
+    minimum_protocol_version       = "TLSv1"
   }
 
   restrictions {

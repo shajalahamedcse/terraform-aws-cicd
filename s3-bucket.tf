@@ -6,9 +6,9 @@ data "template_file" "s3_policy" {
 }
 
 resource "aws_s3_bucket" "static_web_bucket" {
-  bucket = var.static_web_bucket_name
-  acl    = "public-read"
-  policy = data.template_file.s3_policy.rendered
+  bucket        = var.static_web_bucket_name
+  acl           = "public-read"
+  policy        = data.template_file.s3_policy.rendered
   force_destroy = true
 
   website {

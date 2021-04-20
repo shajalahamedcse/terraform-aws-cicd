@@ -67,14 +67,14 @@ resource "aws_iam_policy" "web_pipeline_policy" {
   path        = "/service-role/"
   policy = jsonencode(
     {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Effect": "Allow",
-                "Action": "*",
-                "Resource": "*"
-            }
-        ]
+      "Version" : "2012-10-17",
+      "Statement" : [
+        {
+          "Effect" : "Allow",
+          "Action" : "*",
+          "Resource" : "*"
+        }
+      ]
     }
   )
 }

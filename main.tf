@@ -10,15 +10,15 @@ terraform {
 }
 
 provider "aws" {
-  region  = var.region
+  region = var.region
 }
 
 data "aws_availability_zones" "available" {
 }
 
 provider "github" {
-  token   = var.github_token
-  owner   = var.repository_owner
+  token = var.github_token
+  owner = var.repository_owner
 }
 
 provider "random" {
