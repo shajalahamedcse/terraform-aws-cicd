@@ -24,7 +24,7 @@ artifacts:
   files:
     - "**/*"
   name: "web-dist-${env}"
-  base-directory: build
+  base-directory: dist
 
 cache:
   paths:
