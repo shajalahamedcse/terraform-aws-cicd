@@ -15,14 +15,14 @@ phases:
       - npm i
   build:
     commands:
-      - npm run build
+      - npm run generate
   post_build:
     commands:
       - echo Build completed on
 
 artifacts:
   files:
-    - "build/*"
+    - "**/*"
   name: "web-dist-${env}"
   base-directory: build
 
