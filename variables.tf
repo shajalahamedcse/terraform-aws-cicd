@@ -15,22 +15,22 @@ variable "repository_branch" {
 
 variable "repository_owner" {
   description = "GitHub repository owner"
-  default     = "shahedex"
+  default     = "onelabone"
 }
 
 variable "repository_name" {
   description = "GitHub repository name"
-  default     = "React-TodoList-App"
+  default     = "tiger-admin"
 }
 
 variable "static_web_bucket_name" {
   description = "S3 Bucket to deploy to"
-  default     = "static-web-example-bucket-778877"
+  default     = "nuxt-web-example-bucket-778877"
 }
 
 variable "artifacts_bucket_name" {
   description = "S3 Bucket for storing artifacts"
-  default     = "static-web-example-artifacts-777788"
+  default     = "nuxt-web-example-artifacts-777788"
 }
 
 variable "github_token" {
